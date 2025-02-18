@@ -65,6 +65,12 @@ body {
     margin-top: 20px;
 }
 
+.temp_min_max {
+    color: #ffff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
 .caixa-menor {
     display: flex;
     align-items: center;

@@ -1,4 +1,5 @@
-const key = "ad08ce117622ef4d94ae30aa01feb5ab"
+const key = 'ad08ce117622ef4d94ae30aa01feb5ab'
+
 
 function exibirDados(dados){
     console.log(dados)
@@ -7,6 +8,8 @@ function exibirDados(dados){
     document.querySelector(".texto-previsao").innerHTML = dados.weather[0].description
     document.querySelector(".umidade").innerHTML = `Umidade: ${dados.main.humidity}%`
     document.querySelector(".img-previsao").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+    document.querySelector(".temp_min").innerHTML = Math.floor(dados.main.temp_min) + "°C Mín"
+    document.querySelector(".temp_max").innerHTML = Math.floor(dados.main.temp_max) + "°C Máx"
 }
 
 async function buscarCidade(cidade) {
