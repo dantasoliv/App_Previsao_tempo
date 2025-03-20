@@ -1,5 +1,12 @@
-const key = 'ad08ce117622ef4d94ae30aa01feb5ab'
+let key
 
+async function fetchKey() {
+    const response = await fetch('key_api.txt')
+    const data = await response.text()
+    key = data
+}
+
+fetchKey()
 
 function exibirDados(dados){
     console.log(dados)
